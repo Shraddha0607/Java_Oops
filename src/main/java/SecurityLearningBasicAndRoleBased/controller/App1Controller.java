@@ -1,4 +1,4 @@
-package SecurityLearningBasicAndRoleBased;
+package SecurityLearningBasicAndRoleBased.controller;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +20,7 @@ public class App1Controller {
     }
 
     @PreAuthorize("hasAuthority('ROLE_ADMIN')")
-    @PostMapping("/saveName")
+    @PostMapping("/admin/saveName")
     public void saveName(@RequestParam int id){
         System.out.println("hit admin");
         System.out.println("Post api hit "+ id);

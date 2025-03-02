@@ -1,13 +1,16 @@
 package SecurityLearningBasicAndRoleBased;
 
+import org.apache.catalina.core.ApplicationContext;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 public class SecurityMain {
     public static void main(String[] args){
-        SpringApplication.run(SecurityMain.class, args);
-
+        ConfigurableApplicationContext context =  SpringApplication.run(SecurityMain.class, args);
+        System.out.println("Its is runing");
+        System.out.println(" context vlaue " + context.toString() );
     }
 }
 
